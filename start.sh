@@ -30,8 +30,8 @@ tailscaled \
     --state=/var/lib/tailscale/tailscaled.state \
     --socket=/var/run/tailscale/tailscaled.sock \
     --tun=userspace-networking \
-    --socks5-server=localhost:1055 \
-    --outbound-http-proxy-listen=localhost:1055 &
+    --socks5-server=0.0.0.0:1055 \
+    --outbound-http-proxy-listen=0.0.0.0:1055 &
 TAILSCALED_PID=$!
 
 echo "Waiting for tailscaled socket..."
